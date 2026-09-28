@@ -293,7 +293,7 @@ install_singbox_script() {
     choose_singbox_core
     show_warning "$MSG_SINGBOX_INSTALL"
 
-    wget -O /root/install-singbox.sh https://raw.githubusercontent.com/mrvokintos/luci-app-singbox-ui/$BRANCH/other/scripts/install-singbox.sh &&
+    wget -O /root/install-singbox.sh https://raw.githubusercontent.com/gogcwy/luci-app-singbox-ui/$BRANCH/other/scripts/install-singbox.sh &&
     chmod 0755 /root/install-singbox.sh &&
     LANG="$LANG" OPERATION="$OPERATION" BRANCH="$BRANCH" SINGBOX_INSTALL_MODE="$SINGBOX_INSTALL_MODE" sh /root/install-singbox.sh
 
@@ -304,7 +304,7 @@ install_singbox_script() {
 install_singbox_ui_script() {
     show_warning "$MSG_SINGBOX_UI_INSTALL"
 
-    wget -O /root/install-singbox-ui.sh https://raw.githubusercontent.com/mrvokintos/luci-app-singbox-ui/$BRANCH/other/scripts/install-singbox-ui.sh &&
+    wget -O /root/install-singbox-ui.sh https://raw.githubusercontent.com/gogcwy/luci-app-singbox-ui/$BRANCH/other/scripts/install-singbox-ui.sh &&
     chmod 0755 /root/install-singbox-ui.sh &&
     LANG="$LANG" OPERATION="$OPERATION" BRANCH="$BRANCH" sh /root/install-singbox-ui.sh
 
