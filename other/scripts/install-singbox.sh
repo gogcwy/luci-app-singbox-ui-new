@@ -27,7 +27,7 @@ ensure_ui_library() {
     fi
 
     mkdir -p "$SCRIPT_DIR/lib" 2>/dev/null
-    ui_url="https://raw.githubusercontent.com/mrvokintos/luci-app-singbox-ui/$BRANCH/other/scripts/lib/ui.sh"
+    ui_url="https://raw.githubusercontent.com/gogcwy/luci-app-singbox-ui/$BRANCH/other/scripts/lib/ui.sh"
     if command -v wget >/dev/null 2>&1; then
         wget -O "$UI_PATH" "$ui_url" || return 1
     elif command -v curl >/dev/null 2>&1; then
@@ -48,7 +48,7 @@ ensure_pkg_library() {
     fi
 
     mkdir -p "$SCRIPT_DIR/lib" 2>/dev/null
-    pkg_url="https://raw.githubusercontent.com/mrvokintos/luci-app-singbox-ui/$BRANCH/other/scripts/lib/pkg.sh"
+    pkg_url="https://raw.githubusercontent.com/gogcwy/luci-app-singbox-ui/$BRANCH/other/scripts/lib/pkg.sh"
     if command -v wget >/dev/null 2>&1; then
         wget -O "$PKG_PATH" "$pkg_url" || return 1
     elif command -v curl >/dev/null 2>&1; then
