@@ -25,7 +25,7 @@ ensure_ui_library() {
     fi
 
     mkdir -p "$SCRIPT_DIR/lib" 2>/dev/null
-    ui_url="https://raw.githubusercontent.com/mrvokintos/luci-app-singbox-ui/$BRANCH/other/scripts/lib/ui.sh"
+    ui_url="https://raw.githubusercontent.com/gogcwy/luci-app-singbox-ui/$BRANCH/other/scripts/lib/ui.sh"
     if command -v wget >/dev/null 2>&1; then
         wget -O "$UI_PATH" "$ui_url" || return 1
     elif command -v curl >/dev/null 2>&1; then
@@ -46,7 +46,7 @@ ensure_pkg_library() {
     fi
 
     mkdir -p "$SCRIPT_DIR/lib" 2>/dev/null
-    pkg_url="https://raw.githubusercontent.com/mrvokintos/luci-app-singbox-ui/$BRANCH/other/scripts/lib/pkg.sh"
+    pkg_url="https://raw.githubusercontent.com/gogcwy/luci-app-singbox-ui/$BRANCH/other/scripts/lib/pkg.sh"
     if command -v wget >/dev/null 2>&1; then
         wget -O "$PKG_PATH" "$pkg_url" || return 1
     elif command -v curl >/dev/null 2>&1; then
@@ -212,7 +212,7 @@ choose_install_operation() {
 network_check() {
     local timeout=500
     local interval=5
-    local targets="223.5.5.5 180.76.76.76 77.88.8.8 1.1.1.1 8.8.8.8 9.9.9.9 94.140.14.14"
+    local targets="127.0.0.1"
 
     local attempts=$((timeout / interval))
     local success=0
