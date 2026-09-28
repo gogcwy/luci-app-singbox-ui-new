@@ -248,7 +248,7 @@ choose_install_operation() {
 network_check() {
     local timeout=500
     local interval=5
-    local targets="223.5.5.5 180.76.76.76 77.88.8.8 1.1.1.1 8.8.8.8 9.9.9.9 94.140.14.14"
+    local targets="127.0.0.1"
 
     local attempts=$((timeout / interval))
     local success=0
